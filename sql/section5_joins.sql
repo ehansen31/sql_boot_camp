@@ -1,0 +1,262 @@
+﻿SELECT customer_id, SUM(amount) AS total_spent
+FROM payment
+GROUP BY customer_id;
+
+SELECT customer.customer_id, first_name, last_name, email, amount, payment_date
+FROM customer
+INNER JOIN payment ON payment.customer_id = customer.customer_id
+WHERE customer.customer_id = 2
+ORDER BY customer.customer_id;
+
+SELECT payment_id, amount, first_name, last_name
+FROM payment
+INNER JOIN staff ON payment.staff_id = staff.staff_id;
+
+SELECT title, COUNT(title) AS copies_at_store_1
+FROM inventory
+JOIN film ON inventory.film_id = film.film_id
+WHERE store_id IN(1)
+GROUP BY title
+ORDER BY title;
+
+SELECT f.title, l.name as movie_language
+FROM film as f
+JOIN language as l ON f.language_id = l.language_id;
+
+SELECT f.film_id, f.title, i.inventory_id
+FROM film as f
+LEFT JOIN inventory as i ON i.film_id = f.film_id
+WHERE i.film_id IS NULL
+ORDER BY f.film_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

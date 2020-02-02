@@ -1,0 +1,13 @@
+version: "3"
+services:
+  db:
+    image: "postgres:11.6"
+    container_name: "sql_bootcamp"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=dvd_rental
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
