@@ -34,7 +34,10 @@ WHERE film_id IN (
 	WHERE rental.return_date BETWEEN '2005-05-29' AND '2005-05-30'
 );
 
-
+SELECT a.first_name, a.last_name, b.first_name, b.last_name
+FROM customer AS a 
+JOIN customer AS b
+ON a.first_name = b.last_name;
 
 
 
